@@ -1,6 +1,10 @@
 #include <stdio.h>
+int ceiling(int x, int n) {
+	return (x % n == 0 || x < 0)? x / n : (x+n)/n;
+}
 int main(void) {
-//打印一个为%的字符
-	printf("print:%c",'%');
+	printf("20 / 4 =%d\n", ceiling(20, 4));
+	printf("17 / 4 =%d\n", ceiling(17, 4));	
+	printf("-17 / 4 =%d\n", ceiling(-17, 4));
 	return 0;
 }
