@@ -30,18 +30,16 @@ double imgPart(struct Complex z) {
     return z.y;
 }
 
-char* toString(struct Complex z) {
+void toString(struct Complex z, char* res) {
     char* real, *img;
     //FIXME 使用null代替
     int signReal, signImg, digiReal, digiImg;
     real = fcvt(z.x, 2, &digiReal, &signReal);
     img = fcvt(z.y, 2, &digiImg, &signImg);
-    char res[10];
     strcpy(res, real);
     strcat(res, "  ");
     strcat(res, img);
     puts(res);
-    return res;
 }
 
 #endif /* Complex_h */

@@ -12,6 +12,8 @@
 int main(int argc, const char * argv[]) {
     struct Complex z = constructor(10, 2);
 //    printf("complex:%f %f\n", realPart(z), imgPart(z));
-    printf("c:%s", toString(z));
+    char str[10];
+    toString(z, str);
+    printf("c:%s", str);
     return 0;
 }
